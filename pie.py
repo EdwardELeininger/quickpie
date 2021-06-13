@@ -40,7 +40,6 @@ def _find(icon, iconB=None):
             the name of that software is obfuscated.
 
         if location == None and pyautogui.locateOnScreen('icons/rightArrow.png') != None or  pyautogui.locateOnScreen('icons/leftArrow.png') != None:
-                logging.debug("the UI on this program is bad, this ribbon is an over complication. the scroll arrows are slow, IDK who they hasve working on UX, but they should not be doing UX.")
                 if pyautogui.locateOnScreen('icons/rightArrow.png') != None:
                         logging.debug("scrolling to the right")
                         pyautogui.mouseDown(pyautogui.center(pyautogui.locateOnScreen('icons/rightArrow.png')))
@@ -54,7 +53,6 @@ def _find(icon, iconB=None):
                         pyautogui.mouseUp
                         location = pyautogui.locateOnScreen(icon)
                 if location == None:
-                        logging.debug("UI unusable, find better software")
                         return 1
         """
         if location == None and iconB == None:
